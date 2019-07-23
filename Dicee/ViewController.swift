@@ -28,11 +28,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        //Change the dice images as soon as the dice app lunch
+        //Change the dice images as soon as the dice app launch
         updateDiceImages();
     }
 
     @IBAction func rollButtonPress(_ sender: UIButton) {
+        updateDiceImages();
+    }
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         updateDiceImages();
     }
     
